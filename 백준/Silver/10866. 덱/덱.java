@@ -1,15 +1,17 @@
-import java.util.Scanner;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.LinkedList;
+import java.io.BufferedReader;
 
 public class Main {
-    public static void main(String[] args) {
-
-        Scanner scanner = new Scanner(System.in);
-        int N = Integer.parseInt(scanner.nextLine());
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int N =  Integer.parseInt(br.readLine());
         LinkedList<Integer> list = new LinkedList<>();
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < N; i++) {
-            String[] string = scanner.nextLine().split(" ");
+
+            String[] string = br.readLine().split(" ");
             String a = string[0];
             String b = "";
             if (string.length == 2) b = string[1];
